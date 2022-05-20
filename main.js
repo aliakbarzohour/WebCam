@@ -1,3 +1,4 @@
+// Giving video element in html
 const video = document.querySelector("#video");
 
 let facingMode = "user";
@@ -7,7 +8,7 @@ let constraints = {
         facingMode
     }
 };
-
+// function for turn on camera
 function OnCamera() {
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
         video.srcObject = stream;
@@ -15,6 +16,7 @@ function OnCamera() {
     console.log("camera on")
 }
 
+// function for turn off camera
 function OffCamera() {
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
         video.srcObject = null;
